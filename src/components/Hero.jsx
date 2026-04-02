@@ -81,9 +81,6 @@ const Hero = () => {
             src="/hero-doctor.png" 
             alt="طبيب مختص" 
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            onError={(e) => {
-              e.target.src = 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1000&auto=format&fit=crop';
-            }}
           />
         </div>
         {/* Floating cards for "wow" factor */}
