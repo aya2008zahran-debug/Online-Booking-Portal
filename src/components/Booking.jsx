@@ -32,11 +32,11 @@ const Booking = () => {
 
       if (error) throw error;
 
-      alert('تم الحجز بنجاح وحفظه في قاعدة البيانات!');
+      alert('تم تأكيد موعدك بنجاح! ✙\nسيصلك إشعار قريباً.');
       setStep(1); // Reset
     } catch (err) {
       console.error('Error booking:', err.message);
-      alert('حدث خطأ أثناء الحجز، تأكد من وجود جدول "bookings" في Supabase.');
+      alert('حدث خطأ أثناء الحجز، يرجى المحاولة مرة أخرى.');
     } finally {
       setLoading(false);
     }
@@ -178,7 +178,7 @@ const Booking = () => {
                   }}
                >
                  {loading && <Loader2 className="animate-spin" />}
-                 {loading ? 'جاري الحفظ...' : 'تأكيد الحجز وحفظ في Supabase'}
+                 {loading ? 'جاري التأكيد...' : 'تأكيد الحجز ومتابعة الموعد'}
                </button>
             </div>
           )}
